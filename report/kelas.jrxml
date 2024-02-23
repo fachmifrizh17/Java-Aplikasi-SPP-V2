@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="kelas" language="groovy" pageWidth="650" pageHeight="550" orientation="Landscape" columnWidth="610" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81f22193-af8e-49b8-951a-6b1a92727dc2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="kelas" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     konfir.`kode_transaksi` AS konfir_kode_transaksi,
+     konfir.`nisn` AS konfir_nisn,
+     konfir.`nama` AS konfir_nama,
+     konfir.`kelas` AS konfir_kelas,
+     konfir.`angkatan` AS konfir_angkatan,
+     konfir.`jenis` AS konfir_jenis,
+     konfir.`bulan` AS konfir_bulan,
+     konfir.`biaya` AS konfir_biaya,
+     konfir.`tgl` AS konfir_tgl,
+     konfir.`bayar` AS konfir_bayar,
+     konfir.`status` AS konfir_status
+FROM
+     `konfir` konfir
+WHERE
+     kelas LIKE '%$P!{kelas}%']]>
+	</queryString>
+	<field name="konfir_kode_transaksi" class="java.lang.String"/>
+	<field name="konfir_nisn" class="java.lang.Integer"/>
+	<field name="konfir_nama" class="java.lang.String"/>
+	<field name="konfir_kelas" class="java.lang.String"/>
+	<field name="konfir_angkatan" class="java.lang.String"/>
+	<field name="konfir_jenis" class="java.lang.String"/>
+	<field name="konfir_bulan" class="java.lang.String"/>
+	<field name="konfir_biaya" class="java.lang.Integer"/>
+	<field name="konfir_tgl" class="java.sql.Date"/>
+	<field name="konfir_bayar" class="java.lang.Integer"/>
+	<field name="konfir_status" class="java.lang.String"/>
+	<variable name="konfir_bayar_1" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{konfir_bayar}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="202" y="59" width="170" height="20" uuid="e380cb4e-7d21-4d8f-8225-954c84a1b483"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue"/>
+				</textElement>
+				<text><![CDATA[DKI JAKARTA, KODE POS 14370]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="47" width="427" height="20" uuid="635ea133-3688-4e9d-889d-124e51a65196"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue"/>
+				</textElement>
+				<text><![CDATA[JL.DERMAGA BARU KLENDER, KLENDER, KEC.DUREN SAWIT, KOTA JAKARTA TIMUR]]></text>
+			</staticText>
+			<line>
+				<reportElement x="100" y="43" width="382" height="1" uuid="22341213-818c-4bea-bd36-1599da105aed"/>
+			</line>
+			<line>
+				<reportElement x="100" y="40" width="382" height="1" uuid="50e3959e-9336-4384-a4e7-a1ffd002ed4e"/>
+			</line>
+			<staticText>
+				<reportElement x="100" y="0" width="382" height="40" uuid="fed31f0f-c07d-4fcc-93b1-4ef7b65c3b99"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMA BUDAYA KLENDER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="69" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="610" height="69" uuid="c85e82e8-08b9-4ff9-b052-0ccaee5cbc1d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="29" width="100" height="20" uuid="d6e4adb1-80b0-4a27-8da2-5bdeff30c51e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE TRANSAKSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="29" width="100" height="20" uuid="330659dd-f845-4d5b-9df3-1bcabad7951a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KELAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="29" width="100" height="20" uuid="5dcded5d-46fd-4189-8bc9-9d081721d274"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JENIS BAYARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="29" width="100" height="20" uuid="90553b2b-3bd6-436f-b2a6-a638b37dcfe0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BULAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="29" width="100" height="20" uuid="e076b065-a9a7-4fc8-a1d3-54f75a2bcc99"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BIAYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="29" width="100" height="20" uuid="e20acf78-5f74-43c6-97fa-635111b15edc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMBAYARAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="610" height="39" uuid="88e2c358-f600-4dd9-9a0e-6789d4025f69"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="10" width="100" height="20" uuid="3fbb6ee1-39cf-469d-853f-292cfb57d2d3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{konfir_kode_transaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="10" width="100" height="20" uuid="5f524e1b-cf07-48d8-b7eb-5e65a201fc93"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{konfir_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="10" width="100" height="20" uuid="238b0703-62ba-4d8f-9ffc-8f093e0e0f47"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{konfir_jenis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="10" width="100" height="20" uuid="a0eb77b8-237d-4b5c-9275-e8a29656e469"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{konfir_bulan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="10" width="100" height="20" uuid="2850ecf4-a975-40ef-a280-51e27d81c8e3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{konfir_biaya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="10" width="100" height="20" uuid="6e94ce67-2862-4950-bdae-e76d1eb1f845"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{konfir_bayar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="420" y="26" width="123" height="20" uuid="b57dd5e6-3d22-4333-a4f5-8ca05ef487d0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[KEPALA SMA BUDAYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="69" width="202" height="20" uuid="d6cb2f8f-aa7b-4f4a-82d5-3be8887c1851"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[(..........Nuryahya, S.Pd.,M.M..........)]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="455" y="6" width="100" height="20" uuid="3b876764-2999-447c-9c65-f8418127dceb"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="412" y="6" width="100" height="20" uuid="414d7ee7-52a8-4c2e-b4f8-c1290cd84fbe"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Jakarta, ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="50"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="50"/>
+	</lastPageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="610" height="42" uuid="6fd61821-f30b-4a17-ac20-76022221b697"/>
+			</rectangle>
+			<textField>
+				<reportElement x="500" y="12" width="100" height="20" uuid="20803352-9ea1-43d5-ac37-a2ec1580b72e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{konfir_bayar_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="12" width="100" height="20" uuid="0ccdf60b-3196-4ec3-8311-618155cf065a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL Rp.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

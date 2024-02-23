@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="siswa" language="groovy" pageWidth="595" pageHeight="600" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dbaaaee5-0de9-4548-8801-d776f19b2def">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     siswa.`nisn` AS siswa_nisn,
+     siswa.`nis` AS siswa_nis,
+     siswa.`nama_siswa` AS siswa_nama_siswa,
+     siswa.`kelas` AS siswa_kelas,
+     siswa.`tahun` AS siswa_tahun,
+     siswa.`biaya` AS siswa_biaya,
+     siswa.`kelamin` AS siswa_kelamin,
+     siswa.`telepon` AS siswa_telepon,
+     siswa.`alamat` AS siswa_alamat
+FROM
+     `siswa` siswa]]>
+	</queryString>
+	<field name="siswa_nisn" class="java.lang.Integer"/>
+	<field name="siswa_nis" class="java.lang.Integer"/>
+	<field name="siswa_nama_siswa" class="java.lang.String"/>
+	<field name="siswa_kelas" class="java.lang.String"/>
+	<field name="siswa_tahun" class="java.lang.Integer"/>
+	<field name="siswa_biaya" class="java.lang.Integer"/>
+	<field name="siswa_kelamin" class="java.lang.String"/>
+	<field name="siswa_telepon" class="java.lang.Integer"/>
+	<field name="siswa_alamat" class="java.lang.String"/>
+	<title>
+		<band height="92" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="84" width="555" height="1" uuid="004f79a1-33bb-46e9-9af6-02a15da12e47"/>
+			</line>
+			<line>
+				<reportElement x="0" y="85" width="555" height="1" uuid="b8e77f37-c33c-4c01-9d28-aaf12eb7ab74"/>
+			</line>
+			<staticText>
+				<reportElement x="187" y="59" width="170" height="20" uuid="7143b921-91cb-442d-90d5-65adc2fbda61"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[DKI JAKARTA, KODE POS 14370]]></text>
+			</staticText>
+			<line>
+				<reportElement x="85" y="40" width="382" height="1" uuid="f9f7f4a0-c796-4c48-b26f-1178152c1765"/>
+			</line>
+			<line>
+				<reportElement x="85" y="43" width="382" height="1" uuid="99478950-52f6-4eae-849a-e6a6bca7347f"/>
+			</line>
+			<staticText>
+				<reportElement x="85" y="0" width="382" height="40" uuid="58a62782-0256-4b21-8975-13345fb8f3d3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMA BUDAYA KLENDER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="47" width="427" height="20" uuid="4064229f-a8db-4166-b524-57907103f3b7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[JL.DERMAGA BARU KLENDER, KLENDER, KEC.DUREN SAWIT, KOTA JAKARTA TIMUR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="2" width="555" height="33" uuid="07e8c556-90ab-4438-b7db-68349cfd4b18"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="-19" y="11" width="100" height="20" uuid="1c643e6a-f693-45a3-af39-61721277b4df"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NISN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="11" width="100" height="20" uuid="02e5e2d7-0210-4f0c-8af1-6792e9b167f2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="11" width="100" height="20" uuid="db31df0f-f18e-4177-b7e6-0b202bd1a30e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEPON]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="11" width="100" height="20" uuid="1208cb20-2748-4b90-9f90-f397eb9bf0fe"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA SISWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="11" width="100" height="20" uuid="4403a624-fa32-4347-b0b9-768d3fd98104"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KELAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="11" width="100" height="20" uuid="76b463c3-3287-4112-9dbf-995c2db990d4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JENIS KELAMIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="11" width="100" height="20" uuid="496de678-94e9-4775-917e-76f52400149a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALAMAT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="60" uuid="fd5a58b8-d9a9-436d-b0a5-09f05ed4e573"/>
+			</rectangle>
+			<textField>
+				<reportElement x="-19" y="6" width="100" height="20" uuid="d0d4a4f2-727a-4b8f-b740-6fd5921cabdd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_nisn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="6" width="100" height="20" uuid="36d7fec3-0b99-4d8f-8b83-c26583bf8c03"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_nis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="6" width="100" height="20" uuid="ecedc550-7f47-436b-af2f-a47a3895c520"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_nama_siswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="6" width="100" height="20" uuid="7cf30b20-d8a3-4e33-861b-74cc4a689cf9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="6" width="100" height="20" uuid="982e6e3a-2d74-42fb-9614-9681add3daeb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="6" width="100" height="20" uuid="fba67723-f1f4-4663-a67a-44fdb2231eb2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_telepon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="467" y="6" width="100" height="48" uuid="44f05c28-eb71-4f00-b673-41a38e39b636"/>
+				<textElement textAlignment="Center">
+					<font fontName="Microsoft New Tai Lue" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="90" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="400" y="0" width="100" height="20" uuid="3ffcad2d-5c72-4f6c-9af9-451ff5a48cee"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="363" y="20" width="123" height="20" uuid="4cdbcad5-1a9b-4201-b8b9-0f2e1d4b5bdf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[KEPALA SMA BUDAYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="70" width="202" height="20" uuid="1252df13-8285-4ef2-9040-29767faed937"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[(..........Nuryahya, S.Pd.,M.M..........)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="0" width="100" height="20" uuid="291e7887-7a9e-4339-917a-4aa41746b20b"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Jakarta, ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="50"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="50"/>
+	</lastPageFooter>
+</jasperReport>
